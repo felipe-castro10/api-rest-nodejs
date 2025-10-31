@@ -1,6 +1,13 @@
-import 'dotenv/config'
-import { error } from 'node:console'
+import { config } from 'dotenv'
+
 import { z } from 'zod'
+
+if (process.env.NODE_ENV === 'test') {
+  config({ path: '.env.test', override: true })
+} else {
+  console.log(process.env.NODE_ENV)
+  config()
+}
 
 // process.env
 
