@@ -1,4 +1,11 @@
-tmp/app.db
+# Databse
+tmp/*.db
+# Dependencies
 node_modules
+
+# Enviroment
 .env
 .env.test
+
+#Build
+build
